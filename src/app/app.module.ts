@@ -24,7 +24,7 @@ import { Test3Component } from './observables/test3/test3.component';
     OperatorsComponent,
     Test1Component,
     Test2Component,
-    Test3Component
+    Test3Component,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ExerciseService } from 'src/app/services/exercise.service';
 
 @Component({
   selector: 'app-test1',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Test1Component {
 
-  constructor() { }
+  constructor(private exerciseService: ExerciseService) { }
 
   onInitObservableButtonClicked() {
 
