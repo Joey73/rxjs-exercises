@@ -46,7 +46,6 @@ export class OperatorsComponent {
         next: data => this.task3ResultString += `-----${data}`,
         error: e => console.log(e),
       });
-  
   }
 
 }
