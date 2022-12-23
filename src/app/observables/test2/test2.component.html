@@ -1,1 +1,19 @@
-<p>test2 works!</p>
+<br><br>
+<button mat-raised-button color="primary" (click)="onSubscribeToObservableButtonClicked()">Subscribe to Observable</button>
+<br><br>
+<button mat-raised-button color="primary" (click)="onSubscribeToSubjectButtonClicked()">Subscribe to Subject</button>
+<br><br>
+<table>
+    <tr>
+      <th>Observable</th>
+      <th>Subject</th>
+    </tr>
+    <tr>
+      <td>
+        {{observableResultString}}
+      </td>
+      <td>
+        {{subjectResultString}}
+      </td>
+    </tr>
+</table>  

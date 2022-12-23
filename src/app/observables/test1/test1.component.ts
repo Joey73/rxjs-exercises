@@ -10,12 +10,8 @@ export class Test1Component {
 
   constructor(private exerciseService: ExerciseService) { }
 
-  onInitObservableButtonClicked() {
-    this.exerciseService.initDataObservable();
-  }
-
-  onInitSubjectButtonClicked() {
-
+  onInitExampleObservableAndSubjectButtonClicked() {
+    this.exerciseService.initExampleObservableAndSubject();
   }
 
 }
