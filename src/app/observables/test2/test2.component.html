@@ -10,10 +10,14 @@
     </tr>
     <tr>
       <td>
-        {{observableResultString}}
+        <div *ngFor="let arrayitem of observableResultArray">
+          {{ arrayitem }}<br>
+        </div>
       </td>
       <td>
-        {{subjectResultString}}
+        <div *ngFor="let arrayitem of subjectResultArray">
+          {{ arrayitem }}<br>
+        </div>
       </td>
     </tr>
 </table>  

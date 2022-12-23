@@ -19,8 +19,7 @@ export class ExerciseService implements OnInit, OnDestroy {
     console.log('initExampleObservableAndSubject()');
     // Init Observable
     this.exampleObservable$  = interval(1000).pipe(
-      take(101),
-      map(i => i)
+      take(20)
     );
 
     // Init Subject
@@ -42,16 +41,6 @@ export class ExerciseService implements OnInit, OnDestroy {
     console.log('getExampleDataViaSubject()');
     return this.exampleSubject$.asObservable();
   }
-
-  /*
-  public sendData(data: string) {
-    this.testSubject$.next(data);
-  }
-
-  public onData(): Observable<string> {
-    return this.testSubject$.asObservable();
-  }
-  */
  
   ngOnDestroy(): void {
     this.exampleObservableSubscription?.unsubscribe();

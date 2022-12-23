@@ -1,1 +1,23 @@
-<p>test3 works!</p>
+<br><br>
+<button mat-raised-button color="primary" (click)="onSubscribeToObservableButtonClicked()">Subscribe to Observable</button>
+<br><br>
+<button mat-raised-button color="primary" (click)="onSubscribeToSubjectButtonClicked()">Subscribe to Subject</button>
+<br><br>
+<table>
+    <tr>
+      <th>Observable</th>
+      <th>Subject</th>
+    </tr>
+    <tr>
+      <td>
+        <div *ngFor="let arrayitem of observableResultArray">
+          {{ arrayitem }}<br>
+        </div>
+      </td>
+      <td>
+        <div *ngFor="let arrayitem of subjectResultArray">
+          {{ arrayitem }}<br>
+        </div>
+      </td>
+    </tr>
+</table>
