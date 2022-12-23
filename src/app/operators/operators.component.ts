@@ -40,12 +40,12 @@ export class OperatorsComponent {
 
     // Verdopple jeden Wert und speichere alle die > 100 sind in task3ResultString.
     this.randomNumberSubject$.pipe(
-        map(x => x * 2),
-        filter(x => x > 100)
-      ).subscribe({
-        next: data => this.task3ResultString += `-----${data}`,
-        error: e => console.log(e),
-      });
+      map(x => x * 2),
+      filter(x => x > 100)
+    ).subscribe({
+      next: data => this.task3ResultString += `-----${data}`,
+      error: e => console.log(e),
+    });
   }
 
 }
