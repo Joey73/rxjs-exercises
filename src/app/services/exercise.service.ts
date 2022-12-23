@@ -19,7 +19,7 @@ export class ExerciseService implements OnInit, OnDestroy {
     console.log('initExampleObservableAndSubject()');
     // Init Observable
     this.exampleObservable$  = interval(1000).pipe(
-      take(20)
+      take(21)
     );
 
     // Init Subject
