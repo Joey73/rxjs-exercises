@@ -10,7 +10,7 @@ export class OperatorsComponent {
   /* Observable mit 10 zufälligen Zahlen (von 0 - 100) welche alle 3 Sekunden
   ausgegeben werden */
   randomNumberObservable$: Observable<number> = interval(3000).pipe(
-    take(10),
+    take(11),
     map(() => Math.floor(Math.random() * 100))
   );
   task1ResultString: string = '';

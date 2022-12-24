@@ -1,8 +1,32 @@
-<br><br>
-<button mat-raised-button color="primary" (click)="onButtonClicked()">Execute</button>
-<br><br>
-task1ResultString: {{ task1ResultString }}
-<br><br>
-task2ResultString: {{ task2ResultString }}
-<br><br>
-task3ResultString: {{ task3ResultString }}
+<div style="overflow-x: auto">
+    <table>
+      <tr>
+        <th></th>
+        <th><button mat-raised-button color="primary" (click)="onButtonClicked()">Execute</button></th>
+      </tr>
+      <tr>
+        <td class="firstcolumn">Marble Task 1</td>
+        <td><img  class="marble1" [src]="'/assets/images/OperatorsTask1MarbleDiagram.png'" alt="onInit() image"></td>
+      </tr>
+      <tr>
+        <td class="firstcolumn">Result-String Task 1</td>
+        <td>{{ task1ResultString }}</td>
+      </tr>
+      <tr>
+        <td class="firstcolumn">Marble Task 2</td>
+        <td><img  class="marble2" [src]="'/assets/images/OperatorsTask2MarbleDiagram.png'" alt="onInit() image"></td>
+      </tr>
+      <tr>
+        <td class="firstcolumn">Result-String Task 2</td>
+        <td>{{ task2ResultString }}</td>
+      </tr>
+      <tr>
+        <td class="firstcolumn">Marble Task 3</td>
+        <td><img  class="marble3" [src]="'/assets/images/OperatorsTask3MarbleDiagram.png'" alt="onInit() image"></td>
+      </tr>
+      <tr>
+        <td class="firstcolumn">Result-String Task 3</td>
+        <td>{{ task3ResultString }}</td>
+      </tr>
+    </table>
+</div>
