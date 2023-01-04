@@ -17,15 +17,20 @@ export class ExerciseService implements OnInit, OnDestroy {
 
   initExampleObservableAndSubject() {
     console.log('initExampleObservableAndSubject()');
-    // Init Observable
+    this.initExampleObservable();
+    this.initExampleSubject();
+  }
+
+  private initExampleObservable() {
     this.exampleObservable$  = interval(1000).pipe(
       take(21)
     );
+  }
 
-    // Init Subject
-    this.exampleObservableSubscription = this.exampleObservable$.subscribe(this.exampleSubject$);
+  private initExampleSubject() {
+    this.exampleObservableSubscription = this.exampleObservable$?.subscribe(this.exampleSubject$);
     /*
-    this.exampleObservableSubscription = this.exampleObservable$.subscribe({
+    this.exampleObservableSubscription = this.exampleObservable$?.subscribe({
       next: data => this.exampleSubject$.next(data),
       error: e => this.exampleSubject$.error(e),
       complete: () => this.exampleSubject$.complete()
