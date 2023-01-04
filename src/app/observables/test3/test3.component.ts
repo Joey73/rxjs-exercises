@@ -18,9 +18,9 @@ export class Test3Component implements OnDestroy{
 
   onSubscribeToObservableButtonClicked() {
     /*
-      Exercise 1:
-      Subscribe to the Observable (which you will find in the exercise.service.ts)
-      and add the receiving data to the observableResultArray.
+      Übung 1:
+      Subscribe das Observable (zu finden in exervice.service.ts)
+      und füge die Daten dem observableResultArray hinzu.
     */
     this.exerciseService.getExampleDataViaObservable()?.subscribe({
       next: data => {
@@ -31,9 +31,9 @@ export class Test3Component implements OnDestroy{
 
   onSubscribeToSubjectButtonClicked() {
     /*
-      Exercise 2:
-      Subscribe to the Subject (which you will find in the exercise.service.ts)
-      and add the receiving data to the subjectResultArray.
+      Übung 2:
+      Subscribe das Subject (zu finden in exervice.service.ts)
+      und füge die Daten dem subjectResultArray hinzu.
     */
     this.exerciseService.getExampleDataViaSubject()?.subscribe({
       next: data => {
@@ -45,8 +45,8 @@ export class Test3Component implements OnDestroy{
 
   ngOnDestroy(): void {
     /*
-      Exercise 3:
-      Unsubscribe both subscriptions
+      Übung 3:
+      Unsubscribe beide Subscriptions.
     */
     this.subscription1?.unsubscribe();
     this.subscription2?.unsubscribe();

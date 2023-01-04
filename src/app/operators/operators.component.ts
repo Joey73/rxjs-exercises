@@ -7,8 +7,10 @@ import { filter, interval, map, Observable, Subject, take } from 'rxjs';
   styleUrls: ['./operators.component.scss']
 })
 export class OperatorsComponent {
-  /* Observable mit 10 zufälligen Zahlen (von 0 - 100) welche alle 3 Sekunden
-  ausgegeben werden */
+  /*
+    Observable mit 10 zufälligen Zahlen (von 0 - 100) welche alle 3 Sekunden
+    ausgegeben werden
+   */
   randomNumberObservable$: Observable<number> = interval(3000).pipe(
     take(11),
     map(() => Math.floor(Math.random() * 100))
@@ -24,13 +26,13 @@ export class OperatorsComponent {
   onButtonClicked() {
     this.randomNumberObservable$.subscribe(this.randomNumberSubject$);
 
-    // Subscribe randomNumberObservable$ und fülle task1ResultString
+    // Übrung 1: Subscribe randomNumberSubject$ und fülle task1ResultString
     this.randomNumberSubject$.subscribe({
       next: data => this.task1ResultString += `-----${data}`,
       error: e => console.log(e),
     });
     
-    // Verdopple jeden Wert und speichere diese in task2ResultString.
+    // Übung 2: Verdopple jeden Wert und speichere diese in task2ResultString.
     this.randomNumberSubject$.pipe(
       map(x => x * 2)
     ).subscribe({
@@ -38,7 +40,7 @@ export class OperatorsComponent {
       error: e => console.log(e),
     });
 
-    // Verdopple jeden Wert und speichere alle die > 100 sind in task3ResultString.
+    // Übung 3: Verdopple jeden Wert und speichere alle die > 100 sind in task3ResultString.
     this.randomNumberSubject$.pipe(
       map(x => x * 2),
       filter(x => x > 100)
