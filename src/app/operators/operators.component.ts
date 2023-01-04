@@ -7,11 +7,6 @@ import { filter, interval, map, Observable, Subject, Subscription, take } from '
   styleUrls: ['./operators.component.scss']
 })
 export class OperatorsComponent implements OnDestroy {
-  subscription1: Subscription | undefined;
-  subscription2: Subscription | undefined;
-  subscription3: Subscription | undefined;
-  subscription4: Subscription | undefined;
-
   /*
     Observable mit 10 zufälligen Zahlen (von 0 - 100) welche alle 3 Sekunden
     ausgegeben werden
@@ -24,6 +19,11 @@ export class OperatorsComponent implements OnDestroy {
   task2ResultString: string = '';
   task3ResultString: string = '';
   randomNumberSubject$: Subject<number> = new Subject<number>();
+
+  subscription1: Subscription | undefined;
+  subscription2: Subscription | undefined;
+  subscription3: Subscription | undefined;
+  subscription4: Subscription | undefined;
 
   constructor() {
   }
