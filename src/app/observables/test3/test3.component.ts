@@ -7,7 +7,7 @@ import { ExerciseService } from 'src/app/services/exercise.service';
   templateUrl: './test3.component.html',
   styleUrls: ['./test3.component.scss']
 })
-export class Test3Component implements OnDestroy{
+export class Test3Component implements OnDestroy {
   observableResultArray: Array<number> = [];
   subjectResultArray: Array<number> = [];
 
