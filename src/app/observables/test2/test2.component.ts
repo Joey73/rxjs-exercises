@@ -19,7 +19,7 @@ export class Test2Component  implements OnDestroy {
   onSubscribeToObservableButtonClicked() {
     /*
       Übung 1:
-      Subscribe das Observable (zu finden in exervice.service.ts)
+      Subscribe das Observable (zu finden in exercise.service.ts)
       und füge die Daten dem observableResultArray hinzu.
     */
   }
