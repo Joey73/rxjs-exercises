@@ -27,7 +27,7 @@ export class Test2Component  implements OnDestroy {
   onSubscribeToSubjectButtonClicked() {
     /*
       Übung 2:
-      Subscribe das Subject (zu finden in exervice.service.ts)
+      Subscribe das Subject (zu finden in exercise.service.ts)
       und füge die Daten dem subjectResultArray hinzu.
     */
   }
