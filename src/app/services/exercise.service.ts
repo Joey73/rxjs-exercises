@@ -1,20 +1,14 @@
-import { Injectable, OnDestroy, OnInit } from '@angular/core';
-import { interval, map, Observable, Subject, Subscription, take } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { interval, Observable, Subject, Subscription, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExerciseService implements OnInit, OnDestroy {
+export class ExerciseService {
   exampleObservable$: Observable<number> | undefined = undefined;
   exampleSubject$ = new Subject<number>();
   exampleObservableSubscription: Subscription | undefined;
   
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
   initExampleObservableAndSubject() {
     console.log('initExampleObservableAndSubject()');
     this.initExampleObservable();
