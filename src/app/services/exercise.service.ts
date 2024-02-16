@@ -38,11 +38,11 @@ export class ExerciseService implements OnInit, OnDestroy {
     */
   }
 
-  public getExampleDataViaObservable() {
+  public getExampleObservable() {
     return this.exampleObservable$;
   }
 
-  public getExampleDataViaSubject(): Observable<number> | undefined {
+  public getExampleSubjectAsObservable(): Observable<number> | undefined {
     console.log('getExampleDataViaSubject()');
     return this.exampleSubject$.asObservable();
   }

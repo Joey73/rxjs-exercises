@@ -22,11 +22,6 @@ export class Test2Component  implements OnDestroy {
       Subscribe das Observable (zu finden in exervice.service.ts)
       und füge die Daten dem observableResultArray hinzu.
     */
-    this.subscription1 = this.exerciseService.getExampleDataViaObservable()?.subscribe({
-      next: data => {
-        this.observableResultArray.unshift(data);
-      }
-    });
   }
 
   onSubscribeToSubjectButtonClicked() {
@@ -35,11 +30,6 @@ export class Test2Component  implements OnDestroy {
       Subscribe das Subject (zu finden in exervice.service.ts)
       und füge die Daten dem subjectResultArray hinzu.
     */
-    this.subscription2 = this.exerciseService.getExampleDataViaSubject()?.subscribe({
-      next: data => {
-        this.subjectResultArray.unshift(data);
-      }
-    });
   }
 
   ngOnDestroy(): void {
@@ -47,8 +37,6 @@ export class Test2Component  implements OnDestroy {
       Übung 3:
       Unsubscribe beide Subscriptions.
     */
-    this.subscription1?.unsubscribe();
-    this.subscription2?.unsubscribe();
   }
 
 }

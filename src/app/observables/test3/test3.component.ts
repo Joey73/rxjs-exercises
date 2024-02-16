@@ -22,7 +22,7 @@ export class Test3Component implements OnDestroy {
       Subscribe das Observable (zu finden in exervice.service.ts)
       und füge die Daten dem observableResultArray hinzu.
     */
-    this.subscription1 = this.exerciseService.getExampleDataViaObservable()?.subscribe({
+    this.subscription1 = this.exerciseService.getExampleObservable()?.subscribe({
       next: data => {
         this.observableResultArray.unshift(data);
       }
@@ -35,7 +35,7 @@ export class Test3Component implements OnDestroy {
       Subscribe das Subject (zu finden in exervice.service.ts)
       und füge die Daten dem subjectResultArray hinzu.
     */
-    this.subscription2 = this.exerciseService.getExampleDataViaSubject()?.subscribe({
+    this.subscription2 = this.exerciseService.getExampleSubjectAsObservable()?.subscribe({
       next: data => {
         console.log('onSubscribeToSubjectButtonClicked() - data: ', data);
         this.subjectResultArray.unshift(data);
