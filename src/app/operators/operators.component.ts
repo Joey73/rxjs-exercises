@@ -37,7 +37,7 @@ export class OperatorsComponent implements OnDestroy {
       error: e => console.log(e),
     });
     
-    // Übung 2: Verdopple jeden Wert und speichere diese in task2ResultString.
+    // Übung 2: Subscribe randomNumberSubject$ und verdopple jeden Wert und speichere diese in task2ResultString.
     this.subscription3 = this.randomNumberSubject$.pipe(
       map(x => x * 2)
     ).subscribe({
@@ -45,7 +45,7 @@ export class OperatorsComponent implements OnDestroy {
       error: e => console.log(e),
     });
 
-    // Übung 3: Verdopple jeden Wert und speichere alle die > 100 sind in task3ResultString.
+    // Übung 3: Subscribe randomNumberSubject$  und verdopple jeden Wert und speichere alle die > 100 sind in task3ResultString.
     this.subscription4 = this.randomNumberSubject$.pipe(
       map(x => x * 2),
       filter(x => x > 100)
